@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="/tasks" method="post">
+            <input type="text" name="todo_text" placeholder="Add Todo" />
+            <input type="submit" value="Add" />
+        </form>
+        <ol>
+        <% tasks.forEach(function (v,k) { %>
+            <li><%= v.text %>[<%= v.done %>]<form action='/<%=  k %>/done' method="post"><input type="submit" value="done" /></form></li>
+        <% }); %>
+        </ol>
+    </body>
+</html>
