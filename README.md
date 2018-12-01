@@ -1,5 +1,2 @@
-TODO:
-- [ ] CSS当て
-- [ ] gethoとつなぐ
-- [ ] webにあげる
-- [ ] リファクタ
+# web3todo
+gethoハッカソンで紹介した簡単なtodoアプリです
