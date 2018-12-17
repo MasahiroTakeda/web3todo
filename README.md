@@ -28,7 +28,8 @@ $ npm install
 
 ## コントラクトのデプロイ  
 - todoコントラクト(`contracts/todo.sol`)をgethoにデプロイします
-- 作成したノードのサブドメインを確認し、`truffle.js`内の`<GETHO_SUBDOMAIN>` を書き換える
+- 作成したノードのサブドメインを確認し、`truffle.js`内4行目の`<GETHO_SUBDOMAIN>` を書き換える
+[![Image from Gyazo](https://i.gyazo.com/174debc7bfd29c6cb24766a97b719e55.png)](https://gyazo.com/174debc7bfd29c6cb24766a97b719e55)
 
 ```
 $ truffle migrate --network getho // 2度目以降の場合は `--reset` をつける
@@ -38,32 +39,33 @@ $ truffle migrate --network getho // 2度目以降の場合は `--reset` をつ�
 
 ## webアプリケーションを立ち上げる  
 - ブロックチェーンにアクセスするWebアプリケーションを立ち上げます
-- コントラクトのデプロイをした時に発行された `TdDo`コントラクトのアドレスをコピーし、`app.js`内の`<TODO_CONTRACT_ADDRESS>`を書き換える
-<画像いれる>
-- 作成したノードのサブドメインを確認し、`app.js`内の`<GETHO_SUBDOMAIN>`を書き換える
+- コントラクトのデプロイをした時に発行された `TdDo`コントラクトのアドレスをコピーし、`app.js`内15行目の`<TODO_CONTRACT_ADDRESS>`を書き換える
+[![Image from Gyazo](https://i.gyazo.com/35246ab84d3fe02b14b04f2b95c82ad2.png)](https://gyazo.com/35246ab84d3fe02b14b04f2b95c82ad2)
+
+- 作成したノードのサブドメインを確認し、`app.js`内13行目の`<GETHO_SUBDOMAIN>`を書き換える
 
 ```
 $ node app.js
 ```
 
-アプリケーションが立ち上がると、
-**http://localhost:3000/にアクセスできます**
+アプリケーションが立ち上がると、http://localhost:3000/ にアクセスできます
 
 ## gethoにコントラクトを登録する  
 - 自分が作成したコントラクトをgethoにアップロードします
-- カレントディレクトリ内ある`getho_<mac|linux>`を使います
+- カレントディレクトリ内ある`getho_<osx|linux>`を使います
 
 ```
 // gethoにログイン
-$ getho login
+$ ./getho_osx login
 email: // 登録したメールアドレスを入力
 password: // 登録したパスワードを入力
 
 // 自分のノード一覧を取得
-$ getho nodes
+$ ./getho_osx nodes
 
 // gethoにコントラクトをアップロード
-$ getho upload ./build/contracts/ToDo.json -s `getho nodes`
+$ ./getho_osx upload ./build/contracts/ToDo.json -s <GETHO_SUBDOMAIN>
 ```
 
 **getho上でコントラクトの関数を実行できるようになります**
+
