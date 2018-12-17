@@ -29,7 +29,7 @@ $ npm install
 ## コントラクトのデプロイ  
 - todoコントラクト(`contracts/todo.sol`)をgethoにデプロイします
 - 作成したノードのサブドメインを確認し、`truffle.js`内4行目の`<GETHO_SUBDOMAIN>` を書き換える
-[![Image from Gyazo](https://i.gyazo.com/174debc7bfd29c6cb24766a97b719e55.png)](https://gyazo.com/174debc7bfd29c6cb24766a97b719e55)
+[![Image from Gyazo](https://i.gyazo.com/d4371b29f469fb4191ec5f3e66e1b91e.png)](https://gyazo.com/d4371b29f469fb4191ec5f3e66e1b91e)
 
 ```
 $ truffle migrate --network getho // 2度目以降の場合は `--reset` をつける
