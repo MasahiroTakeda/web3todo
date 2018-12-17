@@ -15,7 +15,7 @@ gethoとTruffleを使ったDApp開発ハンズオン
 - 今回のアプリケーションのレポジトリを取得します
 
 ```
-$ git clone https://daisuke310vvv/web3todo
+$ git clone https://github.com/daisuke310vvv/web3todo
 $ cd web3todo
 ```
 
