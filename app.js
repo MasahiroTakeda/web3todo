@@ -10,9 +10,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 var web3 = new Web3();
-web3.setProvider(new web3.providers.HttpProvider('http://strong-lion-40123.getho.io:80/jsonrpc'));
+web3.setProvider(new web3.providers.HttpProvider('http://<GETHO_SUBDOMAIN>.getho.io:80/jsonrpc'));
 
-const todoAddr = '0x6176e9ec8ab713e3ab4ca415d25f57eea52e3cd6';
+const todoAddr = '<TODO_CONTRACT_ADDRESS>';
 const abi = [{"constant":false,"inputs":[{"name":"text","type":"string"}],"name":"newTask","outputs":[{"name":"taskID","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"index","type":"uint256"}],"name":"done","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getNumberOfTasks","outputs":[{"name":"length","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"index","type":"uint256"}],"name":"getByIndex","outputs":[{"name":"text","type":"string"},{"name":"done","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"}]
 
 var todoContract = new web3.eth.Contract(abi, todoAddr);
@@ -21,7 +21,7 @@ web3.eth.getAccounts()
     .then((accounts) => {
         web3.eth.defaultAccount = accounts[0];
         console.log('set default account to ' + accounts[0]);
-        app.listen(3000, "192.168.95.146")
+        app.listen(3000)
         console.log('app is running');
     }
 );
