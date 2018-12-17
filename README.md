@@ -1,5 +1,5 @@
 # web3todo
-gethoとTruffleを使ったDApp開発ハンズオン
+gethoとTruffleを使ったDApp開発ハンズオン
 
 ## 開発環境
 - Node(v9.6.1)
@@ -9,7 +9,7 @@ gethoとTruffleを使ったDApp開発ハンズオン
 ### ①gethoアカウントの生成
 - https://getho.io にアクセス
 - ユーザー登録をする
-- (ノードの画面が確認できたらOKです！)
+- (ノードの画面が確認できたらOKです！)
 
 ### ②レポジトリのクローン  
 - 今回のアプリケーションのレポジトリを取得します
@@ -19,7 +19,7 @@ $ git clone https://github.com/daisuke310vvv/web3todo
 $ cd web3todo
 ```
 
-### ③Nodeのライブラリのインストール  
+### ③Nodeのライブラリのインストール  
 - webアプリケーションを動かすための依存パッケージをインストールします
 
 ```
@@ -28,7 +28,7 @@ $ npm install
 ```
 
 ## コントラクトのデプロイ  
-- todoコントラクト(`contracts/todo.sol`)をgethoにデプロイします
+- todoコントラクト(`contracts/todo.sol`)をgethoにデプロイします
 - 作成したノードのサブドメインを確認し、`truffle.js`内の`<GETHO_SUBDOMAIN>` を書き換える
 
 ```
@@ -49,7 +49,7 @@ $ node app.js
 アプリケーションが立ち上がると、
 **http://localhost:3000/にアクセスできます**
 
-## gethoにコントラクトを登録する  
+## gethoにコントラクトを登録する  
 - 自分が作成したコントラクトをgethoにアップロードします
 - カレントディレクトリ内ある`getho_<mac|linux>`を使います
 
