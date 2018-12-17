@@ -23,7 +23,6 @@ $ cd web3todo
 - webアプリケーションを動かすための依存パッケージをインストールします
 
 ```
-$ cd /path/to/web3todo
 $ npm install
 ```
 
@@ -40,6 +39,7 @@ $ truffle migrate --network getho // 2度目以降の場合は `--reset` をつ�
 ## webアプリケーションを立ち上げる  
 - ブロックチェーンにアクセスするWebアプリケーションを立ち上げます
 - コントラクトのデプロイをした時に発行された `TdDo`コントラクトのアドレスをコピーし、`app.js`内の`<TODO_CONTRACT_ADDRESS>`を書き換える
+<画像いれる>
 - 作成したノードのサブドメインを確認し、`app.js`内の`<GETHO_SUBDOMAIN>`を書き換える
 
 ```
