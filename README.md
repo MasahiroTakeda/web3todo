@@ -1,6 +1,9 @@
 # web3todo
 gethoとTruffleを使ったDApp開発ハンズオン
 
+プレゼン資料は[こちら](https://speakerdeck.com/daisuke310vvv/gethototrufflewoshi-tuta-dappskai-fa-wakusiyotupu)
+
+
 ## 開発環境
 - Node(v9.6.1)
 - npm(v5.6.0)
